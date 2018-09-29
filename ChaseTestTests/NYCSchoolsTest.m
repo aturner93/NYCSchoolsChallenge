@@ -59,9 +59,7 @@ NYCSchools *schools;
     }];
     
     [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {
-        if (error != nil){
-            XCTFail(@"JSON data loaded successfully");
-        }
+            XCTAssertNil(error, @"JSON data loaded successfully");
     }];
 }
 
@@ -75,9 +73,7 @@ NYCSchools *schools;
     }];
     
     [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {
-        if (error != nil){
-            XCTFail(@"JSON data wasn't loaded");
-        }
+            XCTAssertNil(error, @"JSON data wasn't loaded");
     }];
 }
 
