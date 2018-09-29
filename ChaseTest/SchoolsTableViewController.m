@@ -64,12 +64,7 @@
 
 //Return larger height for the cell with SAT scores as it has more text
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath == self.selectedIndexPath){
-        return 100;
-    }
-    else{
-        return 44;
-    }
+    return UITableViewAutomaticDimension;
 }
 
 
@@ -79,8 +74,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kCellIdentifier];
     }
-    
     cell.detailTextLabel.text = @"";
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     //If data is loaded, populate it into cells
     if (self.schools.schoolArray.count > 0){
