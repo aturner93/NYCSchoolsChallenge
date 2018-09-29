@@ -8,5 +8,4 @@ SchoolsTableViewController.m - Displays the data in a UITableView.
 
 
 The main project is called ChaseTests. 
-The unit tests are under ChaseTestTests
-In hindsight, I should have named the project something better. 
+The unit tests are under ChaseTestTests (Not the best name in the world)
